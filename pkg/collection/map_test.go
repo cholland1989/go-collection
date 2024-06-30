@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"slices"
+	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -23,7 +23,7 @@ func ExampleMap() {
 		result = append(result, fmt.Sprintf("%d=%d", key, value))
 	}
 	// Iteration order is not guaranteed
-	slices.Sort(result)
+	sort.Strings(result)
 	fmt.Println(result)
 	// Output: [0=0 1=1]
 }

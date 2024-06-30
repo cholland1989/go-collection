@@ -3,7 +3,7 @@ package collection
 import (
 	"encoding/json"
 	"fmt"
-	"slices"
+	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -22,7 +22,7 @@ func ExampleSet() {
 		result = append(result, value)
 	}
 	// Iteration order is not guaranteed
-	slices.Sort(result)
+	sort.Ints(result)
 	fmt.Println(result)
 	// Output: [0 1]
 }
